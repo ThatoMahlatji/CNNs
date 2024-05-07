@@ -1,0 +1,37 @@
+How to use your GPU in Jupyter Notebook
+
+
+# Create conda environments 
+conda create --name <name> python=3.9 -y
+
+# Check conda environments
+conda info --envs
+
+# To delete environment
+conda env remove --name <name>
+
+# Check version
+python --version
+
+# Activate conda environment
+conda activate my_env
+
+# Install the cuDNN library and CUDA drivers:
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y
+
+# Check CUDA version
+nvcc --version
+
+# Install the TensorFlow library by running the following command:
+pip install "tensorflow<2.11"
+
+# Installing Jupyter Notebook
+1. Run this code inside the Anaconda Powershell Prompt:
+pip install jupyter notebook
+
+2. Open the Jupyter Notebook server by typing:
+jupyter notebook
+
+- Click on the New button and choose Notebook.
+- Select Python 3 (ipykernel) as the kernel.
+
